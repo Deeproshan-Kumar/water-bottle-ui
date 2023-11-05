@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bottle UI</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        max-width: 1220px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(#4b6584,#1e272e);
+      }
+
+      .diary {
+        position: relative;
+        height: 460px;
+        width: 360px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: red;
+        font-family: sans-serif;
+        font-size: 26px;
+        background:#fff;
+        perspective: 1000;
+      }
+
+      .diary::before {
+        content: "";
+        position: absolute;
+        top: 14px;
+        left: -25px;
+        height: 100%;
+        width: 25px;
+        transform: skewY(314deg);
+        background: #fff;
+        border-top-left-radius: 10px;
+        opacity: 0.7;
+      }
+
+      .diary::after {
+        content: "";
+        position: absolute;
+        bottom: -25px;
+        left: -11px;
+        height: 25px;
+        width: 100%;
+        background: repeating-linear-gradient(rgb(131, 129, 129) 10%, #ddd 20%);
+        border-bottom-right-radius: 10px;
+        transform: skewX(315deg);
+      }
+
+      .bottle {
+        position: relative;
+        top: 15%;
+        height: 350px;
+        width: 150px;
+        background: linear-gradient(90deg,#d1ccc0, #fff, #d1ccc0);
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        -webkit-box-reflect: below 0
+          linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+      }
+
+      .bottle::before {
+        content: "";
+        position: absolute;
+        height: 100px;
+        width: 100%;
+        border-radius: 100px;
+        background: linear-gradient(90deg,#d1ccc0, #fff, #d1ccc0);
+        top: -50px;
+      }
+
+      .bottle::after {
+        content: "";
+        position: absolute;
+        height: 80px;
+        width: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(90deg,#d1ccc0, #fff, #d1ccc0);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        top: -120px;
+      }
+
+      .top {
+        position: absolute;
+        height: 8px;
+        width: 71%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #000;
+        top: -117px;
+        z-index: 100;
+      }
+
+      .top:before {
+        content: "";
+        position: absolute;
+        height: 60px;
+        width: 106px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: repeating-linear-gradient(#eb3b5a, #eb3b5a 20px, #000, #000 24px);
+        top: -60px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        z-index: 100;
+      }
+
+      .logo {
+        position: relative;
+        z-index: 1000;
+        text-transform: uppercase;
+        font-family: sans-serif !important;
+        color: #eb3b5a;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        left: 18%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="diary">
+      <h2>Singsys</h2>
+    </div>
+
+    <div class="bottle">
+      <div class="top"></div>
+      <p class="logo">Singsys</p>
+    </div>
+  </body>
+</html>
